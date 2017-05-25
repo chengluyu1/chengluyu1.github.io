@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{padding:0;
+		margin:0;
+		border:0;
+		}
+	article{
+   width:100%;               
+   height:200px;                                          
+     position:relative;
+     display: flex;
+     flex-wrap: nowrap;
+     justify-content: space-between;
+      }  
+      section{
+      	float: left;
+      }                  
+.xx{
+   background:orange;
+   width:20%;
+   height:200px;
+   flex:2;
+   transition: 2s;
+   overflow: hidden;
+   
+}
+.xy{
+   background:purple;
+    width:60%;
+    height:200px;
+transition: 2s;
+   flex:4;
+}
+.xz{
+   width:20%;
+   background: yellow;
+    height:200px;
+    flex:2;
+    overflow: hidden;
+    transition: 2s;
+}
+		
+		
+		
+		
+	</style>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<button>111</button>
+	<button>2222</button>
+	<article>
+   <section class="xx">01</section>            
+   <section class="xy">02</section>        
+   <section class="xz">03</section>
+</article>
+	 <!--<figure class="t1a">
+   
+       	<figcaption>
+       		美式咖啡
+       	</figcaption>
+     </figure>
+     
+     
+     黄瓜:<label><input type="text" /></label>-->
+     <!-- <div>ssd</div>-->
+     
+     <!--<iframe src="https://www.baidu.com/" frameborder="0" width="1000">百度</iframe>-->
+      <!--<button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <div>1111111</div>
+      <div>22222</div>
+      <div>333333333333</div>-->
+	<script>
+
+		$('button').eq(0).click(function(){
+			if($('.xx').width()>0&&$('.xz').width()>0){
+				$('.xx').css('flex','0')
+				$('.xy').css('flex','6')
+			}else if($('.xx').width()==0&&$('.xz').width()>0){
+				$('.xx').css('flex','2')
+				$('.xy').css('flex','4')
+			}else if($('.xx').width()==0&&$('.xz').width()==0){
+				$('.xx').css('flex','2')
+				$('.xy').css('flex','6')
+			}
+
+			
+		
+		})
+		$('button').eq(1).click(function(){
+			if($('.xx').width()>0&&$('.xz').width()>0){
+				$('.xz').css('flex','0')
+				$('.xy').css('flex','6')
+			}else if($('.xx').width()==0&&$('.xz').width()>0){
+				$('.xz').css('flex','0')
+				$('.xy').css('flex','6')
+			}else if($('.xx').width()==0&&$('.xz').width()==0){
+				$('.xz').css('flex','2')
+				$('.xy').css('flex','6')																																																																																																																							
+			}
+		})
+		
+		
+//		选项卡
+//     [...document.querySelectorAll('button')].find((x,y)=>{
+//     	
+//     	  x['onclick'] =()=>{
+//     	  	[...document.querySelectorAll('div')].find(d=>{
+//     	  		d.style.display='none'
+//     	  	});
+//     	  	
+//     	  	
+//     	  	[...document.querySelectorAll('div')][y].style.display='block';
+//     	  }
+//     	
+//     	
+//     })
+
+ 
+//		var html='';
+//		for(var i=0;i<5;i++){
+//		  html+='<li>'+i+'<button>删除</button></li>'
+//		}
+//		
+//		$('ul').append(html)
+//		
+//		$('ul').delegate('button', 'click', function() {
+//			
+//			$(this).parent('li').remove()
+//			
+//		})
+//		var xx='';
+//		 for(var i=0x4e00;i<0x9fa5;i++){
+//		 	 xx += String.fromCharCode(i) 
+//		 }
+//	    document.write(xx)
+	    
+	  
+//		$('span').parentsUntil('div').css({'color':'red','font-size':'20px'});
+
+
+//     $('div').empty()
+//     var arr=[1,2,3]
+//     var str='abc456'
+//     arr.shift()
+//     document.write(arr)
+       
+//     历史记录
+//     localStorage.lastname="Smith";
+//      document.write(sessionStorage.lastname);
+//    $('button').click(function(){
+//    	 localStorage.clear();
+//    })
+//    
+      
+//     document.write(typeof(arr.join(',')))
+       
+      // var arr=['abcd','safaf','3213','sdasdsdf']
+      // var arr1=[]
+      // for(var i=0;i<arr.length;i++){
+      //     arr1.push(arr[i].length)         
+      // }
+
+      //   alert(arr1)
+
+
+        // 去重
+//         var arr=['abcd','safaf','3213','sdasdsdf','3213','123']
+//          for(var i=0;i<arr.length;i++){
+//      for(var j=i+1;j<arr.length;j++){
+//          if(arr[i]==arr[j]){
+//            arr.splice(j,1);
+//                  j--;
+//           }
+//     }
+// }
+
+//   alert(arr.sort())
+
+//var arr=['abcd','safaf','3213','sdasdsdf','3213','123']
+//Array.prototype.xx=function(){
+////	 var arr=[];
+////	 var res={}
+////	 for(var i=0;i<this.length;i++){
+////	 	 if(!res[this[i]]){
+////	 	 	arr.push(this[i])
+////	 	 	res[this[i]]=1
+////	 	 }
+////	 }
+////	 return arr
+//
+//   this.sort()
+//   var res=[this[0]]
+//   for(i=0;i<this.length;i++){
+//   	if(this[i]!=res[res.length-1]){
+//   		res.push(this[i])
+//   	}
+//   }
+//   return res
+//}
+//
+//alert(arr.xx())
+
+
+//   var arr=[1,2,3];
+//     arr.reverse(
+//     	
+//     	function(a,b){
+//     	   return a-b
+//     	}
+//     )
+//    console.log(arr.reverse())
+
+//        普通写法
+//      [1,2,3].find(function(x,y){
+//	    	 console.log(x,y)
+//	    })
+
+
+        
+//      箭头函数
+
+//    [1,2,3].find((x,y,z)=>{
+//    	console.log(x,y,z)
+//    })
+//    document['onclick'] = ()=>{
+//    	alert(1)
+//    }
+      
+	</script>
+</body>
+</html>
